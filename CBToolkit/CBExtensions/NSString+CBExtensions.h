@@ -49,4 +49,6 @@ typedef enum {
 
 + (NSString*) charactersForSet:(CBCharacterSet)set;
 
+- (NSString*)md5;
+
 @end
