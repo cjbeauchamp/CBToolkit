@@ -37,7 +37,8 @@
 
 @implementation NSString (CBExtensions)
 
-+ (NSString*) cbCharactersForSet:(CBCharacterSet)set {
++ (NSString*) charactersForSet:(CBCharacterSet)set
+{
     NSString *string = @"";
     
     if (set & CBCharacterSetLowercase) {
@@ -55,9 +56,10 @@
     return string;
 }
 
-+ (NSString*) cbRandomString:(int)len withCharacterSet:(CBCharacterSet)charSet {
++ (NSString*) randomString:(int)len withCharacterSet:(CBCharacterSet)charSet
+{
     
-    NSString *selection = [NSString cbCharactersForSet:charSet];
+    NSString *selection = [NSString charactersForSet:charSet];
     
     NSMutableString *randomString = [NSMutableString stringWithCapacity:len];
     
@@ -68,17 +70,19 @@
     return randomString;
 }
 
-+ (NSString*) cbRandomString:(int)len {
-    NSLog(@"Trying");
-    return [NSString cbRandomString:len withCharacterSet:CBCharacterSetAlphanumeric];
++ (NSString*) randomString:(int)len
+{
+    return [NSString randomString:len withCharacterSet:CBCharacterSetAlphanumeric];
 }
 
-- (BOOL) cbContainsString:(NSString*)needle {
+- (BOOL) containsString:(NSString*)needle
+{
     return [self rangeOfString:needle].location != NSNotFound;
 }
 
-- (BOOL) cbContainsCharacter:(char)needle {
-    return [self cbContainsString:[NSString stringWithFormat:@"%c", needle]];
+- (BOOL) containsCharacter:(char)needle
+{
+    return [self containsString:[NSString stringWithFormat:@"%c", needle]];
 }
 
 @end

@@ -41,12 +41,12 @@ typedef enum {
 
 @interface NSString (CBExtensions)
 
-+ (NSString*) cbRandomString:(int)len;
-+ (NSString*) cbRandomString:(int)len withCharacterSet:(CBCharacterSet)charSet;
++ (NSString*) randomString:(int)len;
++ (NSString*) randomString:(int)len withCharacterSet:(CBCharacterSet)charSet;
 
-- (BOOL) cbContainsString:(NSString*)needle;
-- (BOOL) cbContainsCharacter:(char)needle;
+- (BOOL) containsString:(NSString*)needle;
+- (BOOL) containsCharacter:(char)needle;
 
-+ (NSString*) cbCharactersForSet:(CBCharacterSet)set;
++ (NSString*) charactersForSet:(CBCharacterSet)set;
 
 @end

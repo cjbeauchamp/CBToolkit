@@ -33,7 +33,8 @@
 
 @implementation UIView (CBExtensions)
 
-- (void) normalizeView {
+- (void) normalizeView
+{
     CGRect f = self.frame;
     f.origin.x = roundf(f.origin.x);
     f.origin.y = roundf(f.origin.y);

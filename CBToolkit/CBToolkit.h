@@ -32,8 +32,6 @@
 #ifndef CBToolkit_CBToolkit_h
 #define CBToolkit_CBToolkit_h
 
-#import <Foundation/Foundation.h>
-
 #import "CBLoader.h"
 #import "CBToast.h"
 #import "CBDevice.h"
