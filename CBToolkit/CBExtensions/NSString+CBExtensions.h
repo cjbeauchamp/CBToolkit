@@ -51,4 +51,6 @@ typedef enum {
 
 - (NSString*)md5;
 
+- (NSString*) urlEncode;
+
 @end
