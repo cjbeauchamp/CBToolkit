@@ -40,6 +40,10 @@
 #import "NSMutableArray+CBExtensions.h"
 #import "UIView+CBExtensions.h"
 
-#define CBLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+//#define CBLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#define CBErrorLog(fmt, ...) NSLog((@"Error > %s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+
+#define CBLog(fmt, ...) /* */
+//#define CBErrorLog(fmt, ...) /* */
 
 #endif
